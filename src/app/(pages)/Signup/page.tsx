@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Footer from "../Footer/pages";
-import Topbar from "../Topbar/page";
-import Backbutton from "../components/Backbutton";
 import Link from "next/link";
+import { useState} from "react";
+import Topbar from "../Topbar/page";
+import Footer from "../Footer/pages";
+import Backbutton from "../components/Backbutton";
 
 
 export default function Signup() {

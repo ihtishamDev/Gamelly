@@ -1,7 +1,8 @@
 import Link from "next/link";
-import Backbutton from "../components/Backbutton";
+import Image from "next/image";
 import Topbar from "../Topbar/page";
-// import Account from "../Account/page";
+import Backbutton from "../components/Backbutton";
+
 
 const Deposit = () => {
   return (
@@ -27,11 +28,13 @@ const Deposit = () => {
               className="flex items-center justify-between w-full px-3 py-2  bg-gray-100 text-sm"
             >
               <div className="flex items-center gap-2">
-                <img
-                  src="/USDTDeposit.png" // Replace with actual path
-                  alt="TRC20"
-                  className="w-5 h-5 rounded-full"
-                />
+              <Image
+  src="/USDTDeposit.png"
+  alt="TRC20"
+  width={20}
+  height={20}
+  className="rounded-full"
+/>
                 <span className="text-sm font-medium text-gray-800">
                   TRC20 (Tron)
                 </span>
@@ -64,11 +67,14 @@ const Deposit = () => {
               className="flex items-center justify-between w-full px-3 py-2  bg-gray-100 text-sm"
             >
               <div className="flex items-center gap-2">
-                <img
-                  src="/tron.png" // Replace with actual path
-                  alt="TRC20"
-                  className="w-5 h-5 rounded-full"
-                />
+              <Image
+  src="/tron.png"
+  alt="TRC20"
+  width={20}
+  height={20}
+  className="rounded-full"
+/>
+
                 <span className="text-sm font-medium text-gray-800">
                   TRC20 (Tron)
                 </span>

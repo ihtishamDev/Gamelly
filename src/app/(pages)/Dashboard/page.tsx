@@ -1,12 +1,10 @@
 "use client";
-import { useEffect, useRef } from "react";
 import Image from "next/image";
-import CryptoGamesCard from "../components/CryptoGamesCard/CryptoGamesCard";
 
-import Footer from "../Footer/pages";
 import Topbar from "../Topbar/page";
-
-
+import Footer from "../Footer/pages";
+import { useEffect, useRef } from "react";
+import CryptoGamesCard from "../components/CryptoGamesCard/CryptoGamesCard";
 
 const Dashbard = () => {
   const sliderRef = useRef<HTMLDivElement>(null);
@@ -56,7 +54,7 @@ const Dashbard = () => {
 
       timeoutRef.current = setTimeout(() => {
         isManualScroll.current = false;
-      }, ); // 0.5 seconds
+      }); // 0.5 seconds
     };
 
     slider.addEventListener("scroll", handleUserScroll);
@@ -70,7 +68,7 @@ const Dashbard = () => {
 
   return (
     <div className="w-full">
-        <Topbar/>
+      <Topbar />
       {/* Poster */}
       <div className="relative sm:w-full w-xs h-[40vh] sm:h-[70vh]">
         <Image src="/Poster.png" alt="Poster" fill className="object-cover" />
@@ -140,7 +138,7 @@ const Dashbard = () => {
           <CryptoGamesCard />
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };

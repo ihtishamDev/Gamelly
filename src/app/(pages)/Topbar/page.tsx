@@ -1,15 +1,12 @@
 "use client";
+import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
-import LoginForm from "../Login/page";
 
 
 const Topbar = () => {
-  const [language, setLanguage] = useState("English");
-  const pathname = usePathname();
+  const [language] = useState("English");
 
   return (
     <div className="w-full shadow-sm bg-white">

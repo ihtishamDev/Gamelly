@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 
 const Logout = () => {
@@ -8,7 +9,13 @@ const Logout = () => {
     <div>
       <button type="button" onClick={() => setOpenit(true)}>
         <div className="flex items-center gap-4 py-2 cursor-pointer">
-          <img src="/Account/Logout.png" alt="Logout" className="w-8 h-8" />
+        <Image
+  src="/Account/Logout.png"
+  alt="TRC20"
+  width={20}
+  height={20}
+  className="rounded-full"
+/>
           <span className="text-sm text-gray-800">Logout</span>
         </div>
       </button>

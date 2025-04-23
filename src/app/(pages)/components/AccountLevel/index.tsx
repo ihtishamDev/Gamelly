@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const AccountLevel = () => {
   const [open, setOpen] = useState(false);
@@ -48,10 +49,12 @@ const AccountLevel = () => {
 
             {/* Modal Content */}
             <div className="flex flex-col items-center text-center px-6 pt-12 pb-6">
-              <img
+              <Image
                 src="/Account/diamond.png"
                 alt="Diamond Icon"
-                className="w-12 mb-3"
+                width={48}
+                height={48}
+                className="mb-3"
               />
               <h2 className="text-lg font-semibold mb-2">Level</h2>
               <p className="text-gray-600 text-sm mb-2">
@@ -65,7 +68,8 @@ const AccountLevel = () => {
                 Daily Profit: <span className="font-bold">10,000 Points</span>
               </p>
               <p className="text-sm text-gray-600 mb-4">
-                Next Level: <span className="font-bold">6</span><br />
+                Next Level: <span className="font-bold">6</span>
+                <br />
                 (25,000 Points per day)
               </p>
               <button

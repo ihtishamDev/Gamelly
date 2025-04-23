@@ -1,14 +1,14 @@
 import Link from "next/link";
-import Backbutton from "../components/Backbutton";
+import Image from "next/image";
 import Topbar from "../Topbar/page";
-// import Account from "../Account/page";
+import Backbutton from "../components/Backbutton";
 
 const Withdraw = () => {
   return (
     <div>
       <Topbar />
       <Link href="/Account">
-      <Backbutton />
+        <Backbutton />
       </Link>
       <div className="max-w-sm mx-auto  p-4">
         <h2 className="text-lg font-semibold mb-1">Deposit</h2>
@@ -27,11 +27,14 @@ const Withdraw = () => {
               className="flex items-center justify-between w-full px-3 py-2  bg-gray-100 text-sm"
             >
               <div className="flex items-center gap-2">
-                <img
-                  src="/USDTDeposit.png" // Replace with actual path
+                <Image
+                  src="/USDTDeposit.png"
                   alt="TRC20"
-                  className="w-5 h-5 rounded-full"
+                  width={20}
+                  height={20}
+                  className="rounded-full"
                 />
+
                 <span className="text-sm font-medium text-gray-800">
                   TRC20 (Tron)
                 </span>
@@ -51,7 +54,9 @@ const Withdraw = () => {
                 />
               </svg>
             </button>
-            <span className="text-xs text-gray-600">Only USDT deposit available at that moment</span>
+            <span className="text-xs text-gray-600">
+              Only USDT deposit available at that moment
+            </span>
           </div>
 
           <div>
@@ -64,10 +69,12 @@ const Withdraw = () => {
               className="flex items-center justify-between w-full px-3 py-2  bg-gray-100 text-sm"
             >
               <div className="flex items-center gap-2">
-                <img
-                  src="/tron.png" // Replace with actual path
+                <Image
+                  src="/tron.png"
                   alt="TRC20"
-                  className="w-5 h-5 rounded-full"
+                  width={20}
+                  height={20}
+                  className="rounded-full"
                 />
                 <span className="text-sm font-medium text-gray-800">
                   TRC20 (Tron)
@@ -104,7 +111,6 @@ const Withdraw = () => {
                 required
               />
               {/* Replace below with actual CAPTCHA image */}
-              
             </div>
           </div>
 
