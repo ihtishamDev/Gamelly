@@ -2,12 +2,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { ChevronDown } from "lucide-react";
 import Countrydropdown from "../Countrydropdown";
 
 
 const TopbarAccount = () => {
-  const [language] = useState("English");
 
   return (
     <div className="w-full shadow-sm bg-white">

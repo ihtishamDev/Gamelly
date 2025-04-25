@@ -1,7 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { MessageCircle } from "lucide-react";
-
 const Footer = () => {
   return (
     <footer className="bg-white px-4 py-2 ">
