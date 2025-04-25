@@ -5,7 +5,10 @@ import "./globals.css";
 const geist = Geist({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Your App Title",
+  icons: {
+    icon: '/pngwing.png',
+  },
+  title: "Gamelly ",
   description: "Your app description",
 };
 

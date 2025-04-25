@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const CryptoGamesCard = () => {
   return (
-    <div className="w-full bg-white py-10 px-4">
+    <div className="w-full bg-white  px-4">
 
       <div className="flex justify-center mt-10 mb-10 gap-30">
         <div className="item-center ">

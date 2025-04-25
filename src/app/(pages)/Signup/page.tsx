@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useState} from "react";
+import Image from "next/image";
+import { useState } from "react";
 import Topbar from "../Topbar/page";
 import Footer from "../Footer/pages";
-import Backbutton from "../components/Backbutton";
 
+import Backbutton from "../components/Backbutton";
 
 export default function Signup() {
   const [code, setCode] = useState("");
@@ -138,8 +139,28 @@ export default function Signup() {
 
           {error && <p className="text-red-500 text-sm">{error}</p>}
         </form>
+        <div className="fixed right-0 top-3/5 -translate-y-1/2 z-50">
+          <div className="relative bg-blue-900 w-10 h-28 rounded-l-3xl flex items-center justify-center">
+            <span className="text-white text-sm font-semibold absolute -rotate-90 tracking-wider whitespace-nowrap">
+              Serve
+            </span>
+
+            <div className="absolute bottom-[-10px] left-1/3 -translate-x-1/2 w-8 h-8 bg-white rounded-full flex items-center justify-center">
+              <Image
+                src="/Account/msg.jpeg"
+                alt="chat"
+                width={32}
+                height={32}
+                className="rounded-full"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-      <Footer />
+      <div className="mt-10">
+        {" "}
+        <Footer />
+      </div>
     </div>
   );
 }

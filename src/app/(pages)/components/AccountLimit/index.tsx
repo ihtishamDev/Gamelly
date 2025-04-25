@@ -7,10 +7,11 @@ const AccountLimit = () => {
   //   const [Close , setClose] = useState(false)
   return (
     <div>
+
       <button
         //   data-dialog-target="web-3-modal"
         onClick={() => setOpen(true)}
-        className="text-xs font-bold mb-1 ml-22 cursor-pointer"
+        className=" cursor-pointer"
         type="button"
       >
         What is limit?

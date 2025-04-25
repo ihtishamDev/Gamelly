@@ -85,26 +85,30 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="flex flex-col items-start md:items-end ">
-          <button className="bg-sky-500 hover:bg-sky-600 text-white px-4 py-2 rounded text-sm w-full md:w-auto mb-1">
+        <div className="flex flex-col items-center md:items-end ">
+          <Link href="/Login" className=""><button className="w-full bg-sky-500 hover:bg-sky-600 text-white px-20 py-2 rounded text-sm w-full md:w-auto mb-1">
             Login
-          </button>
-          <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded text-sm w-full md:w-auto">
+          </button></Link>
+          
+          <Link href="/Signup"><button className="bg-green-500 hover:bg-green-600 text-white px-18 py-2 rounded text-sm w-full md:w-auto">
             Sign Up
-          </button>
+          </button></Link>
+          {/* <div className="items-center">
           <button
             type="button"
             className="flex items-center text-right bg-blue-600 text-white rounded-2xl sm:py-3 py-2 sm:px-7 px-4 hover:bg-blue-700 shadow-lg mt-5 gap-3"
           >
-            <p className="text-xs font-semibold  items-center text-right bg-blue-600 text-white hover:bg-blue-700  ">
+            <p className="text-xs font-semibold items-center text-right bg-blue-600 text-white hover:bg-blue-700  ">
               Messages
             </p>
             <MessageCircle className="w-5 h-5 " />
           </button>
+          </div> */}
+          
         </div>
       </div>
 
-      <div className=" text-center text-gray-400 text-xs">
+      <div className=" text-center text-gray-400 text-xs sm:mt-1 mt-3">
         © 2017–2025 Gamelly.app. All rights reserved.
       </div>
     </footer>

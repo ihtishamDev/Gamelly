@@ -1,10 +1,11 @@
 "use client";
 import Image from "next/image";
-
+import Marquee from "react-fast-marquee";
 import Topbar from "../Topbar/page";
 import Footer from "../Footer/pages";
 import { useEffect, useRef } from "react";
 import CryptoGamesCard from "../components/CryptoGamesCard/CryptoGamesCard";
+import DashboardArticles from "../components/DashboardArticles";
 
 const Dashbard = () => {
   const sliderRef = useRef<HTMLDivElement>(null);
@@ -70,20 +71,17 @@ const Dashbard = () => {
     <div className="w-full">
       <Topbar />
       {/* Poster */}
-      <div className="relative sm:w-full w-xs h-[40vh] sm:h-[70vh]">
+      <div className="relative sm:w-full w-full h-[40vh] sm:h-[70vh] ">
         <Image src="/Poster.png" alt="Poster" fill className="object-cover" />
       </div>
 
       {/* Horizontal Crypto Ticker */}
-      <div
-        ref={sliderRef}
-        className="w-full overflow-x-auto bg-white shadow p-4 scroll-smooth"
-      >
-        <div className="flex items-center gap-6 sm:gap-8 min-w-max">
+      <Marquee speed={30} pauseOnHover={true} gradient={false}>
+        <div className="flex items-center gap-6 sm:gap-8 mt-1">
           {duplicatedData.map((item, index) => (
             <div
               key={index}
-              className="flex items-center gap-2 min-w-[120px] whitespace-nowrap"
+              className="flex items-center gap-2 min-w-[120px] whitespace-nowrap mr-6"
             >
               <div className="w-6 h-6 relative">
                 <Image
@@ -100,16 +98,16 @@ const Dashbard = () => {
             </div>
           ))}
         </div>
-      </div>
+      </Marquee>
 
       {/* Stats + Promo Card Section */}
-      <div className="flex flex-col lg:flex-row justify-between gap-8 px-4 sm:px-6 md:px-10 mt-10 w-full">
+      <div className="flex flex-col lg:flex-row justify-between gap-8  sm:px- md:px-14 px-10 mt-5 w-full">
         {/* Rankings & Prices */}
-        <div className="flex justify-between w-full lg:w-1/2 gap-6">
+        <div className="flex justify-between w-full lg:w-1/2 gap-6 items-center px-6">
           {/* Rankings */}
           <div className="w-1/2">
             <div className="mb-5">
-              <h1 className="font-bold text-lg">Rankings:</h1>
+              <h1 className="font-bold text-lg text-gray-700">Rankings:</h1>
               <p className="text-gray-500 text-sm">Coins</p>
             </div>
             {data.map((item, index) => (
@@ -121,8 +119,8 @@ const Dashbard = () => {
           </div>
 
           {/* Prices */}
-          <div className="w-1/2">
-            <div className="mb-5 mt-10 lg:mt-5">
+          <div className="w-1/2 px-8 sm:px-8">
+            <div className="mb-5 mt-7 lg:mt-5">
               <p className="text-gray-500 text-sm">Price (USD)</p>
             </div>
             {data.map((item, index) => (
@@ -137,6 +135,9 @@ const Dashbard = () => {
         <div className="w-full lg:w-1/2">
           <CryptoGamesCard />
         </div>
+      </div>
+      <div>
+        <DashboardArticles />
       </div>
       <Footer />
     </div>

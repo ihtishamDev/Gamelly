@@ -4,10 +4,10 @@ import Head from 'next/head';
 export default function Home() {
   return (
     <div>
-      <Head>
+      {/* <Head>
         <title>Gamelly</title> 
         <link rel="icon" href="/pngwing.png" />
-      </Head>
+      </Head> */}
 
       <Dashboard />
     </div>
